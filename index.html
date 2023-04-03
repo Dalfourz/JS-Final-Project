@@ -10,25 +10,60 @@
     <script src="https://kit.fontawesome.com/a76b169c3c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="search__bar--wrapper">
-        <label for="site-search">Search the movie:</label>
-        <input type="search" id="search__bar" placeholder="Enter the movie name here...">
-            <button class="search__button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-    </div>
-    <div class="movie">
-        <div class="movie__title">
-            <div class="movie__title--container">
-                <h3>Movie Title</h3>
-                    <p>Year</p>
-                    <p>Language</p>
-                    <p>Metascore</p>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="nav__bar">
+                <figure class="logo__wrapper">
+                    <i class="fa-solid fa-film"></i>
+                </figure>
+                <h1 class="title">Movie History DB</h1>
+                <div class="links__wrapper">
+                    <div class="links">
+                        <a href="" class="link">Home</a>
+                        <a href="" class="link">Find Your Movies</a>
+                    </div>
+                    <div class="contact__button__wrapper">
+                        <a href="" class="contact__button">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="movie__poster--wrapper">
-        <img class="movie__poster" src="" alt="">
+</header>
+    
+<div class="row">
+    <div class="search__bar--container">
+        <label for="site-search" class="searh__label">Search our movies:</label>
+        <div class="search__bar--wrapper"> 
+            <input type="search" id="search__bar" placeholder="Enter the movie name here...">
+                <button class="search__button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+        </div>
     </div>
+    <h2 class="sub__title">Search Results:</h2>
+</div>
+
+<section id="movies__section">
+<div class="row">
+    <div class="movies">
+        <!-- <div class="movie">
+            <div class="movie__title">
+                <div class="movie__title--wrapper">
+                    <h3>Movie Title</h3>
+                        <p>Year</p>
+                        <p>Language</p>
+                        <p>Metascore</p>
+                </div>
+            </div>
+            <div class="movie__poster--wrapper">
+                <img class="movie__poster" src="" alt="">
+            </div>
+        </div> -->
+    </div>
+</div>
+</section>
 </body>
 </html>

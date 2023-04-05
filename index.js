@@ -23,6 +23,12 @@ async function searchMovie(title) {
 
 // getMovieData();
 
+const slider = document.getElementById("myRange");
+const yearDisplay = document.querySelector(".slider__year");
+
+slider.addEventListener("input", function() {
+  yearDisplay.textContent = this.valueAsNumber + 0;
+});
 
 function movieHTML(result) {
   return `<div class="movie">

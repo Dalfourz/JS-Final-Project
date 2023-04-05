@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="./index.js" defer></script>
-    <script src="https://kit.fontawesome.com/a76b169c3c.js" crossorigin="anonymous"></script>
-</head>
-<body>
-
-<header>
-    <div class="container">
+    <script
+      src="https://kit.fontawesome.com/a76b169c3c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
         <div class="row">
-            <div class="nav__bar">
-                <figure class="logo__wrapper">
-                    <i class="fa-solid fa-film"></i>
-                </figure>
-                <h1 class="title">Movie History DB</h1>
-                <div class="links__wrapper">
-                    <div class="links">
-                        <a href="" class="link">Home</a>
-                        <a href="" class="link">Find Your Movies</a>
-                    </div>
-                    <div class="contact__button__wrapper">
-                        <a href="" class="contact__button">Contact</a>
-                    </div>
-                </div>
+          <div class="nav__bar">
+            <figure class="logo__wrapper">
+              <i class="fa-solid fa-film"></i>
+            </figure>
+            <h1 class="title">Movie History DB</h1>
+            <div class="links__wrapper">
+              <div class="links">
+                <a href="" class="link">Home</a>
+                <a href="" class="link">Find Your Movies</a>
+              </div>
+              <div class="contact__button__wrapper">
+                <a href="" class="contact__button">Contact</a>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</header>
-    
-<div class="row">
-    <div class="search__bar--container">
-        <label for="site-search" class="searh__label">Search our movies:</label>
-        <div class="search__bar--wrapper"> 
-            <input type="search" id="search__bar" placeholder="Enter the movie name here...">
-                <button class="search__button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-        </div>
-    </div>
-    <h2 class="sub__title">Search Results:</h2>
-</div>
+      </div>
+    </header>
 
-<section id="movies__section">
-<div class="row">
-    <div class="movies">
-        <!-- <div class="movie">
+    <div class="row">
+      <div class="search__bar--container">
+        <label for="site-search" class="search__label">Search our movies:</label>
+        <div class="search__bar--wrapper">
+          <input
+            type="search"
+            id="search__bar"
+            placeholder="Enter the movie name here..."
+          />
+          <button class="search__button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div class="search__nav">
+        <h2 class="sub__title">Search Results:</h2>
+        <div class="slider__container">
+            <h3>Release Year: between <span class="slider__year">1900 </span> and <span class="slider__year2">2023</span></h3>
+            <input type="range" min="1900" max="2023" value="1900" class="slider" id="myRange">
+        </div>
+      </div>
+    </div>
+    
+    <section id="movies__section">
+      <div class="row">
+        <div class="movies">
+          <!-- <div class="movie">
             <div class="movie__title">
                 <div class="movie__title--wrapper">
                     <h3>Movie Title</h3>
@@ -62,8 +74,9 @@
                 <img class="movie__poster" src="" alt="">
             </div>
         </div> -->
-    </div>
-</div>
-</section>
-</body>
+        </div>
+      </div>
+    </section>
+  </body>
+  
 </html>

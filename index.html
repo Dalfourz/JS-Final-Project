@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="./index.js" defer></script>
+
     <script
       src="https://kit.fontawesome.com/a76b169c3c.js"
       crossorigin="anonymous"
@@ -44,7 +44,7 @@
             id="search__bar"
             placeholder="Enter the movie name here..."
           />
-          <button class="search__button">
+          <button class="search__button" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
@@ -52,8 +52,12 @@
       <div class="search__nav">
         <h2 class="sub__title">Search Results:</h2>
         <div class="slider__container">
-            <h3>Release Year: between <span class="slider__year">1900 </span> and <span class="slider__year2">2023</span></h3>
-            <input type="range" min="1900" max="2023" value="1900" class="slider" id="myRange">
+            <h3>Release Year: between <span class="slider__year">1900 </span> and <span class="slider__year-2">2023</span></h3>
+            <div class="slider__body"></div>
+            <div class="slider__wrapper">
+              <input type="range" min="1900" max="2023" value="1900" class="slider" id="myRange">
+              <input type="range" min="1900" max="2023" value="1900" class="slider_2" id="myRange-2">
+            </div>
         </div>
       </div>
     </div>
@@ -77,6 +81,8 @@
         </div>
       </div>
     </section>
+
+  <script src="./index.js" defer></script>
   </body>
   
 </html>

@@ -10,8 +10,10 @@ function setupSearchListener(searchBarId, callback) { // Callback function from 
 
 setupSearchListener('search__bar', handleSearchTerm);
 
-async function handleSearchTerm(searchTerm) { // Use the search term to fetch the data
-  // Use the search term to fetch the data
+// Use the search term to fetch the data
+
+async function handleSearchTerm(searchTerm) { 
+  // Fetch the data from the API
   const url = await fetch(`https://www.omdbapi.com/?apikey=1fd6092d&s=${searchTerm}`);
   const result = await url.json();
   const movieElement = document.querySelector(".movies");
@@ -29,16 +31,15 @@ function handleSearch(event) {
   handleSearchTerm(searchTerm)
 }
 
-
-
-function showMovieTitle(title) {
+// Fetch the movie imdb data to use on click
+function showMovieImdb(imdb) {
+  localStorage.setItem('movieImdb', imdb);
   window.location.href = `${window.location.origin}/movie.html`
-  console.log(title);
+  console.log(imdb);
 }
 
-
 function movieHTML(result) {  // Create the HTML for the movie
-  return `<div class="movie" onClick="showMovieTitle('${result.Title}')">
+  return `<div class="movie" onClick="showMovieImdb('${result.imdbID}')">
             <div class="movie__title">
               <div class="movie__title--wrapper">
                 <h3>${result.Title}</h3>

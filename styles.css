@@ -32,14 +32,13 @@ HEADER
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 56px;
     position: relative;
 }
 
 .title {
-    position: absolute;
-    left: 37%;
-    font-size: 40px;
+    text-align: center;
+    font-size: 48px;
 }
 
 .fa-film {
@@ -49,6 +48,15 @@ HEADER
 .links__wrapper {
     display: flex;
     justify-content: space-around;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+}
+
+.logo__wrapper {
+    margin-right: 16px;
 }
 
 .links {
@@ -71,6 +79,22 @@ HEADER
     padding: 4px 12px;
     border-radius: 999px;
 }
+
+.image__wrapper {
+    width: 65%;
+    height: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.background__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
 /* 
 
 SEARCH BAR
@@ -79,6 +103,8 @@ SEARCH BAR
 
 #search__bar {
     padding: 8px;
+    width: 300px;
+
 }
 
 .sub__title {
@@ -98,12 +124,15 @@ SEARCH BAR
     flex-direction: column;
     margin-bottom: 40px;
     align-items: center;
-
-
 }
 
 .search__bar--wrapper {
-    margin-top: 16px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.search__bar {
+    
 }
 
 .search__button {
@@ -115,12 +144,17 @@ SEARCH BAR
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+    margin-bottom: 36px;
 }
+
 /* 
 
-MOVIES
+MOVIES SECTION
 
 */
+#movies__section {
+    display: block;
+}
 
 .movie:hover {
     cursor: pointer;

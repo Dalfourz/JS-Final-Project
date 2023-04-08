@@ -17,10 +17,13 @@
       <div class="container">
         <div class="row">
           <div class="nav__bar">
+            <div class="logo__container">
             <figure class="logo__wrapper">
               <i class="fa-solid fa-film"></i>
             </figure>
-            <h1 class="title">Movie History DB</h1>
+            <h2>CineBase</h2>
+          </div>
+            
             <div class="links__wrapper">
               <div class="links">
                 <a href="" class="link">Home</a>
@@ -31,54 +34,60 @@
               </div>
             </div>
           </div>
+          <h1 class="title">World's most complete movie database</h1>
+          <div class="search__bar--container">
+            <label for="site-search" class="search__label">Search your favourite movies here:</label>
+            <div class="search__bar--wrapper">
+              <input
+                type="search"
+                id="search__bar"
+                placeholder="Enter the movie name here..."
+              />
+              <button class="search__button" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+          <figure class="image__wrapper">
+            <img class="background__image" src="./assets/undraw_awards_fieb.svg" alt="">
+          </figure>
         </div>
       </div>
     </header>
 
     <div class="row">
-      <div class="search__bar--container">
-        <label for="site-search" class="search__label">Search our movies:</label>
-        <div class="search__bar--wrapper">
-          <input
-            type="search"
-            id="search__bar"
-            placeholder="Enter the movie name here..."
-          />
-          <button class="search__button" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-      </div>
-      <div class="search__nav">
-        <div class="search__n__filter">
-          <h2 class="sub__title">Search Results:</h2>
-          <div class="filter__result">
-          <select name="" id="filter" onchange="sortMovies(event)">
-            <option value="" disabled selected>
-              Sort by Release Year
-            </option>
-            <option value="LOW_TO_HIGH">
-              Ascending
-            </option>
-            <option value="HIGH_TO_LOW">
-              Descending
-            </option>
-          </select>
-        </div>
-        </div>
-        <div class="slider__container">
-            <h3>Release Year: between <span class="slider__year">1900 </span> and <span class="slider__year-2">2023</span></h3>
-            <div class="slider__body"></div>
-            <div class="slider__wrapper">
-              <input type="range" min="1900" max="2023" value="1900" class="slider" id="myRange">
-              <input type="range" min="1900" max="2023" value="1900" class="slider_2" id="myRange-2">
-            </div>
-        </div>
-      </div>
+
+
     </div>
     
     <section id="movies__section">
       <div class="row">
+        <div class="search__nav">
+          <div class="search__n__filter">
+            <h2 class="sub__title">Search Results:</h2>
+            <div class="filter__result">
+            <select name="" id="filter" onchange="sortMovies(event)">
+              <option value="" disabled selected>
+                Sort by Release Year
+              </option>
+              <option value="LOW_TO_HIGH">
+                Ascending
+              </option>
+              <option value="HIGH_TO_LOW">
+                Descending
+              </option>
+            </select>
+          </div>
+          </div>
+          <div class="slider__container">
+              <h3>Release Year: between <span class="slider__year">1900 </span> and <span class="slider__year-2">2023</span></h3>
+              <div class="slider__body"></div>
+              <div class="slider__wrapper">
+                <input type="range" min="1900" max="2023" value="1900" class="slider" id="myRange">
+                <input type="range" min="1900" max="2023" value="1900" class="slider_2" id="myRange-2">
+              </div>
+          </div>
+        </div>
         <div class="movies">
           <!-- <div class="movie">
             <div class="movie__title">

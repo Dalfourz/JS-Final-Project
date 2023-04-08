@@ -1,5 +1,8 @@
 // http://www.omdbapi.com/?i=tt3896198&apikey=1fd6092d
 
+document.addEventListener('DOMContentLoaded', function() {
+});
+
 function setupSearchListener(searchBarId, callback) { // Callback function from the search bar
   const searchBar = document.getElementById(searchBarId);
   searchBar.addEventListener('search', function() {
@@ -19,7 +22,12 @@ async function handleSearchTerm(searchTerm) {
   result = await url.json();
   const movieElement = document.querySelector(".movies");
   movieElement.innerHTML = result.Search.slice(0, 6).map((result) => movieHTML(result)).join("");
+  setTimeout(() => {
+  const resultSection = document.querySelector('.search__nav')
+  resultSection.scrollIntoView({behavior: 'smooth', block: 'start'});
+}, 1000);
 }
+
 
 // Search on click function
 const searchButton = document.querySelector('.search__button');
@@ -65,4 +73,9 @@ function sortMovies(event) {
     }
     const movieElement = document.querySelector(".movies");
     movieElement.innerHTML = result.Search.slice(0, 6).map((result) => movieHTML(result)).join("");
+  }
+
+  function showDiv() {
+    const myDiv = document.querySelector('#movie__section');
+    myDiv.style.display = 'block';
   }

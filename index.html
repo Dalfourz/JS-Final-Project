@@ -50,7 +50,22 @@
         </div>
       </div>
       <div class="search__nav">
-        <h2 class="sub__title">Search Results:</h2>
+        <div class="search__n__filter">
+          <h2 class="sub__title">Search Results:</h2>
+          <div class="filter__result">
+          <select name="" id="filter" onchange="sortMovies(event)">
+            <option value="" disabled selected>
+              Sort by Release Year
+            </option>
+            <option value="LOW_TO_HIGH">
+              Ascending
+            </option>
+            <option value="HIGH_TO_LOW">
+              Descending
+            </option>
+          </select>
+        </div>
+        </div>
         <div class="slider__container">
             <h3>Release Year: between <span class="slider__year">1900 </span> and <span class="slider__year-2">2023</span></h3>
             <div class="slider__body"></div>

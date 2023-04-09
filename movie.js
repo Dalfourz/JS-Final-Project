@@ -13,7 +13,7 @@ showMovie();
 
 function fullMovie(result) {
   return `<section id="fullMovieDb">
-    <h1>${result.Title}</h1>
+    <h1 class="title">${result.Title}</h1>
     <div class="line"></div>
     <div class="movie__container">
       <div class="image__container">

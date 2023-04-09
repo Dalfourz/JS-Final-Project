@@ -23,6 +23,7 @@ async function handleSearchTerm(searchTerm) {
   const movieElement = document.querySelector(".movies");
   movieElement.innerHTML = result.Search.slice(0, 6).map((result) => movieHTML(result)).join("");
   setTimeout(() => {
+  showDiv()
   const resultSection = document.querySelector('.search__nav')
   resultSection.scrollIntoView({behavior: 'smooth', block: 'start'});
 }, 1000);
@@ -75,7 +76,14 @@ function sortMovies(event) {
     movieElement.innerHTML = result.Search.slice(0, 6).map((result) => movieHTML(result)).join("");
   }
 
-  function showDiv() {
-    const myDiv = document.querySelector('#movie__section');
-    myDiv.style.display = 'block';
-  }
+// Show the results section when triggered
+function showDiv() {
+  const myDiv = document.getElementById('movies__section');
+  myDiv.style.display = 'block';
+}
+
+function searchOverlay () {
+  const loading = document.getElementsByClassName('search__button');
+  const success = document.getElementsByClassName('search__button');
+
+}

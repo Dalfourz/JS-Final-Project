@@ -18,6 +18,7 @@ let result // make result global so we can use it in other functions
 // Use the search term to fetch the data
 async function handleSearchTerm(searchTerm) { 
   // Fetch the data from the API
+  loadingStateOn();
   const url = await fetch(`https://www.omdbapi.com/?apikey=1fd6092d&s=${searchTerm}`);
   result = await url.json();
   const movieElement = document.querySelector(".movies");
@@ -27,8 +28,8 @@ async function handleSearchTerm(searchTerm) {
   const resultSection = document.querySelector('.search__nav')
   resultSection.scrollIntoView({behavior: 'smooth', block: 'start'});
 }, 1000);
+loadingStateOff()
 }
-
 
 // Search on click function
 const searchButton = document.querySelector('.search__button');
@@ -85,5 +86,16 @@ function showDiv() {
 function searchOverlay () {
   const loading = document.getElementsByClassName('search__button');
   const success = document.getElementsByClassName('search__button');
+}
 
+// Hide magnifying icon when triggered
+function loadingStateOn() {
+  const magGlass = document.getElementById("magnifying-glass");
+  magGlass.style.visibility = 'hidden';
+}
+
+// Show magnifying icon when triggered
+function loadingStateOff() {
+  const magGlass = document.getElementById("magnifying-glass");
+  magGlass.style.visibility = 'visible';
 }

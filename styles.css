@@ -103,10 +103,12 @@ HEADER
     padding: 4px 20px;
     border-radius: 999px;
     background-color: #00AEAE;
+    cursor: not-allowed;
 }
 
 .contact__button {
     color: white;
+    
 }
 
 .image__wrapper {
@@ -222,6 +224,10 @@ SEARCH BUTTON
     height: 100%;
     font-size: 20px;
     z-index: -1;
+}
+
+.fa-magnifying-glass{
+    display: block;
 }
 
 .fa-spinner {
